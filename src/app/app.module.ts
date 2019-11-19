@@ -14,6 +14,10 @@ MatToolbarModule,
 MatExpansionModule, } from '@angular/material';
 import { AddRecordComponent } from './add-record/add-record.component';
 import { ViewAllRecordsComponent } from './view-all-records/view-all-records.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { ViewAllRecordsComponent } from './view-all-records/view-all-records.com
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FormsModule,
+    HttpClientModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

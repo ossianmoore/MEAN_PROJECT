@@ -5,6 +5,7 @@ const PORT = 3000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+//string from mongoDB with username and password to gain access
 const mongodb = 'mongodb+srv://admin:Admin123!@recordsdatabasecluster-1rdo8.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(mongodb, {useNewUrlParser:true});
 
@@ -16,8 +17,7 @@ const recordSchema = new Schema({
     year: String,
     genre: String,
     cover: String,
-    price: Number,
-    priceAfterVat: Number
+    price: Number
 });
 
 const RecordModel = mongoose.model('record', recordSchema);
@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
   next();
   });
 
-  app.get('/api/records', (req,res,next) => {
+  app.get('/api/records/records', (req,res,next) => {
 
     console.log("get request")
     RecordModel.find((err,data)=>{
@@ -53,7 +53,7 @@ app.use(function(req, res, next) {
     })
   });
 
-  app.post('/api/records', (req,res) =>{
+  app.post('/api/records/records', (req,res) =>{
     console.log('post Sucessfull');
     console.log(req.body)
     console.log(req.body.title);
@@ -62,7 +62,6 @@ app.use(function(req, res, next) {
     console.log(req.body.genre);
     console.log(req.body.cover);
     console.log(req.body.price);
-    console.log(req.body.priceAfterVat);
     
     RecordModel.create({
       title: req.body.title,
@@ -70,8 +69,7 @@ app.use(function(req, res, next) {
       year: req.body.year,
       genre: req.body.genre,
       cover: req.body.genre,
-      price: req.body.price,
-      priceAfterVat: req.body.priceAfterVat
+      price: req.body.price
     });
     res.json('data uploaded')
   });

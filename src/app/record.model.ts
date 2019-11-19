@@ -5,5 +5,4 @@ export interface Record {
     genre: string;
     cover: string;
     price: number;
-    priceAfterVat: number;
 }
