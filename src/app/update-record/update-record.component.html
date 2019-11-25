@@ -1,0 +1,37 @@
+<mat-card>
+    <form (submit)="onUpdateRecord(recordForm)" #recordForm="ngForm">
+        <mat-form-field>
+            <label>Title</label>
+            <input matInput type="text" name="title" ngModel={{record.title}} required #title="ngModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <label>Artist</label>
+            <input matInput type="text" name="artist" ngModel={{record.artist}} required #artist="ngModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <label>Year</label>
+            <input matInput type="text" name="year" ngModel={{record.year}} required #year="ngModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <label>Genre</label>
+            <input matInput type="text" name="genre" ngModel={{record.genre}} required #genre="ngModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <label>Cover</label>
+            <input matInput type="text" name="cover" ngModel={{record.cover}} required #cover="ngModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <label>Price</label>
+            <input matInput type="number" name="price" ngModel={{record.price}} required #price="ngModel">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" type="submit">
+            Update Record
+        </button>
+    </form>
+</mat-card>

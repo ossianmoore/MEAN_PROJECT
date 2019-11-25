@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecordService }  from '../Services/record.service';
-import { Record } from '../record.model'
+import { Record } from '../record.model';
 import { Observable } from 'rxjs';
+import { Location} from '@angular/common';
 
 @Component({
   selector: 'app-view-record',
@@ -11,11 +12,12 @@ import { Observable } from 'rxjs';
 })
 export class ViewRecordComponent implements OnInit {
 
-  myRecord: any;
+  myrecord: any;
   id: string;
 
   constructor( private activatedRoute: ActivatedRoute,
-               private recordService: RecordService
+               private recordService: RecordService,
+               private location : Location
                ) { }
 
 
@@ -23,18 +25,21 @@ export class ViewRecordComponent implements OnInit {
   //if id is populated, subscribe to data 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
-    //console.log('the id got from param is:' + this.id);
-
-    
       this.recordService.ViewRecord(this.id).subscribe((record) => {
-        this.myRecord = record;
-        //console.log(this.myRecord);
+        this.myrecord = record;
+        console.log(this.myrecord);
       });
     
   }
 
   onDeleteRecord(id: string){
-    this.recordService.DeleteRecord(id).subscribe();
+    id = this.id;
+    console.log("Deleting this record = ", id);
+    this.recordService.DeleteRecord(id).subscribe(
+      ()=>{
+        this.location.back();
+      }
+    );
   }
 
 }

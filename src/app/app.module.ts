@@ -19,13 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material';
 import { ViewRecordComponent } from './view-record/view-record.component';
+import { UpdateRecordComponent } from './update-record/update-record.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddRecordComponent,
     ViewAllRecordsComponent,
-    ViewRecordComponent
+    ViewRecordComponent,
+    UpdateRecordComponent
   ],
   imports: [
     BrowserModule,

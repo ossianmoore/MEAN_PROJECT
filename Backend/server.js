@@ -42,7 +42,7 @@ app.use(function(req, res, next) {
     })
   });
 
-  app.delete('/api/records/:id', (req,res) =>{
+  app.delete('/api/records/records/:id', (req,res) =>{
     console.log(req.params.id);
   
     RecordModel.deleteOne({_id:req.params.id},(error,data)=>{
@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
         
       res.json(data);
     })
-  });
+  })
 
   app.post('/api/records/records', (req,res) =>{
     console.log('post Sucessfull');
@@ -82,7 +82,7 @@ app.use(function(req, res, next) {
     })
   });
 
-  app.put('/api/records/:id', (req, res)=>{
+  app.put('/api/records/records/:id', (req, res)=>{
     console.log("Edit" +req.params.id);
     RecordModel.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, data)=>{
       res.send(data);

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { RecordService } from '../Services/record.service';
+import { Location } from '@angular/common';
 //import ng form module to deal with angular html form
 //import and initiate service to make http requests
 
@@ -11,7 +12,8 @@ import { RecordService } from '../Services/record.service';
 })
 export class AddRecordComponent implements OnInit {
 
-  constructor(private recordService: RecordService) { }
+  constructor(private recordService: RecordService,
+              private location: Location) { }
 
   ngOnInit() {
   }
@@ -20,6 +22,7 @@ export class AddRecordComponent implements OnInit {
   //function to add record to database using service. Takes values from form and uses them as paramterers for the servcie function
   //logs values and resets form
   //if statement to check if from is valid. if not it returns.
+  //goes to previous page once add is complete
   onAddRecord(form: NgForm){
     if (!form.valid){
       return;
@@ -31,7 +34,9 @@ export class AddRecordComponent implements OnInit {
        form.value.year,
        form.value.genre,
        form.value.cover,
-       form.value.price).subscribe();
+       form.value.price).subscribe(()=> {
+         this.location.back();
+       });
     console.log(form.value);
     //form.resetForm();
   }

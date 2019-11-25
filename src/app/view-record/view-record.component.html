@@ -1,10 +1,10 @@
 <mat-card>
     <mat-card-header>
         <mat-card-title>
-            {{myRecord.title}}
+            {{myrecord.title}}
         </mat-card-title>
         <mat-card-subtitle>
-            {{myRecord.artist}}
+            {{myrecord.artist}}
         </mat-card-subtitle>
     </mat-card-header>
 
@@ -12,15 +12,15 @@
 
     <mat-card-content>
         <ul>
-            <li>Genre: {{myRecord.genre}}</li>
-            <li>Year: {{myRecord.year}}</li>
-            <li>Price: {{myRecord.price}}</li>
+            <li>Genre: {{myrecord.genre}}</li>
+            <li>Year: {{myrecord.year}}</li>
+            <li>Price: {{myrecord.price}}</li>
         </ul>
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-raised-button color="primary">UPDATE</button>
-        <button mat-raised-button color="warn" (click)="onDeleteRecord(myRecord._id)">DELETE</button>
+        <button mat-raised-button [routerLink]="['/update-record', myrecord._id]" color="secondary">UPDATE</button>
+        <button mat-raised-button color="warn" (click)="onDeleteRecord(myrecord.id)">DELETE</button>
     </mat-card-actions>
 
 </mat-card>
