@@ -19,7 +19,7 @@ export class RecordService {
 
   //function to retrieve a single record from the collection using unique id
   ViewRecord(id:string):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/api/records/records'+id);
+    return this.httpClient.get('http://localhost:3000/api/records/records/'+id);
   }
 
   //function to return http request all records from the database
@@ -44,13 +44,14 @@ export class RecordService {
                             price : price
                           };
                           console.log("working");
-    return this.httpClient.post('http://localhost:3000/api/records/records', record);
+    return this.httpClient.post('http://localhost:3000/api/records/records/', record);
   }
 
   //function to delete record object from database with a http delete. 
   //id is used to identify object and is passed as a parameter in the request
   DeleteRecord(id:string):Observable<any>{
-    return this.httpClient.delete('http://localhost:3000/api/records/records'+id);
+    console.log(id, "deleted");
+    return this.httpClient.delete('http://localhost:3000/api/records/records/'+id);
   }
 
   //function to update existing record via inputs on update component
@@ -70,7 +71,7 @@ export class RecordService {
                            cover : cover,
                            price : price
                           };
-    return this.httpClient.put('http://localhost:3000/api/records/records'+id,record);
+    return this.httpClient.put('http://localhost:3000/api/records/records/'+id,record);
   }
 
 

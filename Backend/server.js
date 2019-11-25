@@ -74,7 +74,7 @@ app.use(function(req, res, next) {
     res.json('data uploaded')
   });
 
-  app.get('/api/records/:id',(req,res)=>{
+  app.get('/api/records/records/:id',(req,res)=>{
     console.log(req.params.id);
   
     RecordModel.findById(req.params.id, (err, data)=>{

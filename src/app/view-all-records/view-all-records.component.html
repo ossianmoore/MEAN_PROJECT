@@ -1,8 +1,10 @@
 <mat-card>
 <mat-list role="list">
     <mat-list-item role="listitem" *ngFor="let record of MyRecords">
-            Title: {{record.title}}
-            <button></button>
+            <button mat-button [routerLink]="['/view-record', record._id]">
+                <mat-icon>art_track</mat-icon>
+            </button>
+            {{record.title}}
     </mat-list-item>
 </mat-list>
 </mat-card>

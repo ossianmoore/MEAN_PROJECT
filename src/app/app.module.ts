@@ -18,12 +18,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material';
+import { ViewRecordComponent } from './view-record/view-record.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddRecordComponent,
-    ViewAllRecordsComponent
+    ViewAllRecordsComponent,
+    ViewRecordComponent
   ],
   imports: [
     BrowserModule,

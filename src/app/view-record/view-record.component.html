@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            {{myRecord.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{myRecord.artist}}
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image src="assets\Images\blankrecord.jpg" height="250px">
+
+    <mat-card-content>
+        <ul>
+            <li>Genre: {{myRecord.genre}}</li>
+            <li>Year: {{myRecord.year}}</li>
+            <li>Price: {{myRecord.price}}</li>
+        </ul>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="warn" (click)="onDeleteRecord(myRecord._id)">DELETE</button>
+    </mat-card-actions>
+
+</mat-card>

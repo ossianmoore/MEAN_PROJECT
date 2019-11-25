@@ -13,7 +13,8 @@ export class ViewAllRecordsComponent implements OnInit {
 
   private MyRecords: any = [];
 
-  constructor( private recordService: RecordService) { }
+  constructor( private recordService: RecordService,
+                public router: ActivatedRoute) { }
 
   ngOnInit() {
     this.recordService.ViewAllRecords().subscribe((data) => {
@@ -21,5 +22,6 @@ export class ViewAllRecordsComponent implements OnInit {
       console.log(this.MyRecords);
     });
   }
+
 
 }//end viewAllRecords Component

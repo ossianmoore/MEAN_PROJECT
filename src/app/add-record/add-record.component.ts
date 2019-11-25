@@ -19,7 +19,11 @@ export class AddRecordComponent implements OnInit {
 
   //function to add record to database using service. Takes values from form and uses them as paramterers for the servcie function
   //logs values and resets form
+  //if statement to check if from is valid. if not it returns.
   onAddRecord(form: NgForm){
+    if (!form.valid){
+      return;
+    }
     console.log(form.value);
      this.recordService.AddRecord(
        form.value.title,
