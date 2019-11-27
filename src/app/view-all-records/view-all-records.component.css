@@ -1,2 +1,25 @@
-mat-icon{
+.mat-button{
+    font-family: 'Bookman Old Style';
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+.mat-button:hover{
+    color: chartreuse;
+}
+.mat-icon{
+    padding-right: 30px;
+}
+
+.mat-card{
+    background-color: lightslategray;
+    padding: 50px;
+}
+
+.title{
+    font-family: 'Bookman Old Style';
+    font-size: 25px;
+    padding-left: 30px;
+    color: wheat;
+    text-decoration: underline;
 }

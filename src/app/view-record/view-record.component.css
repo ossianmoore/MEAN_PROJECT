@@ -1,0 +1,53 @@
+.updateButton {
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    width: 400px;
+    padding-left: 20px;
+    border-radius: 50px;
+}
+
+.updateButton:hover {
+    background-position: right center;
+    color: black;
+    opacity: 60%;
+}
+
+.deleteButton {
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    width: 400px;
+    padding-left: 20px;
+    border-radius: 50px;
+}
+
+.deleteButton:hover {
+    background-position: right center;
+    color:black;
+    opacity: 60%;
+}
+
+.title{
+    font-family: 'Bookman Old Style';
+    font-size: 40px;
+}
+
+.mat-card{
+    background-color: lightslategray;
+    border-radius: 25px;
+}
+
+.subtitle{
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+}
+
+.mat-card-image{
+    padding-right: 20px;
+}
+
+.coverImage{
+    padding-left: 200px;
+    width: 500px;
+}

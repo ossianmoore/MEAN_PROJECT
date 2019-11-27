@@ -1,3 +1,49 @@
-.form{
-    color:grey;
+.submitButton {
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    width: 400px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
 }
+
+.submitButton:hover {
+    background-position: right center;
+    color: yellow;
+    opacity: 60%;
+}
+
+.label{
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    color: yellow;
+}
+
+.input{
+    font-family: 'Bookman Old Style';
+    font-size: 30px;
+    color: chartreuse;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.mat-card{
+    background-color: lightslategray;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.formField{
+    width: 400px;
+}
+
+.coverImage{
+    padding-left: 500px;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+	border-top-right-radius: 60px;
+	border-bottom-right-radius: 60px;
+}
+
+
+

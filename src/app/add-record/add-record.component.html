@@ -1,74 +1,40 @@
 <mat-card>
     <form (submit)="onAddRecord(recordForm)" #recordForm="ngForm">
-        <mat-form-field>
-            <label> Title </label>
-            <input
-                matInput
-                type="text"
-                name="title"
-                ngModel
-                required
-                #title="ngModel">
+<mat-card-header>
+            <img class="coverImage" mat-card-image src="/assets/Images/file-arrangement-1181769.jpg">
+        </mat-card-header>
+        <mat-form-field class="formField">
+            <label class="label"> Title: </label>
+            <input class="input" matInput type="text" name="title" ngModel required #title="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field>
-                <label> Artist </label>
-                <input
-                    matInput
-                    type="text"
-                    name="artist"
-                    ngModel
-                    required
-                    #artist="ngModel">
+        <mat-form-field class="formField">
+            <label class="label"> Artist: </label>
+            <input class="input" matInput type="text" name="artist" ngModel required #artist="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field>
-                <label> Year </label>
-                <input
-                    matInput
-                    type="text"
-                    name="year"
-                    ngModel
-                    required
-                    #year="ngModel">
+        <mat-form-field class="formField">
+            <label class="label"> Year: </label>
+            <input class="input" matInput type="text" name="year" ngModel required #year="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field>
-                <label> Genre </label>
-                <input
-                    matInput
-                    type="text"
-                    name="genre"
-                    ngModel
-                    required
-                    #genre="ngModel">
+        <mat-form-field class="formField">
+            <label class="label"> Genre: </label>
+            <input class="input" matInput type="text" name="genre" ngModel required #genre="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field>
-                <label> Cover </label>
-                <input
-                    matInput
-                    type="text"
-                    name="cover"
-                    ngModel
-                    required
-                    #cover="ngModel">
+        <mat-form-field class="formField">
+            <label class="label"> Cover: </label>
+            <input class="input" matInput type="text" name="cover" ngModel required #cover="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field>
-                <label> Price </label>
-                <input
-                    matInput
-                    type="number"
-                    name="price"
-                    ngModel
-                    required
-                    #price="ngModel">
-            </mat-form-field>
-            <br>
-        <button
-        mat-raised-button
-        color="accent"
-        type="submit">Save Record</button>
+        <mat-form-field class="formField">
+            <label class="label"> Price: </label>
+            <input class="input" matInput type="number" name="price" ngModel required #price="ngModel">
+        </mat-form-field>
+        <br>
+        <br>
+        <button class="submitButton" mat-raised-button color="accent" type="submit">Save Record</button>
     </form>
+
 </mat-card>

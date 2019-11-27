@@ -1,0 +1,2 @@
+.updateButton {background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%)}
+.updateButton:hover { background-position: right center; }

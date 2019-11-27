@@ -1,14 +1,20 @@
-<mat-toolbar color="primary"> 
+
+
+<mat-toolbar class="mainToolbar">
   <mat-toolbar-row>
-          <span class="title-center">
+    <span class="title">
       Vinyl Warehouse
-  </span>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-<button mat-button [routerLink]="['/viewAllRecords']">View All Records</button>
-<button mat-button [routerLink]="['/addRecord']" color="Warn">Add Record</button>
-</mat-toolbar-row>
+    </span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <button mat-button [routerLink]="['/viewAllRecords']">View All Records</button>
+    <button mat-button [routerLink]="['/addRecord']">Add Record</button>
+  </mat-toolbar-row>
 </mat-toolbar>
+
+<div class="content">
+<img src="../assets/Images/vinylRecordCollection.jpg" height="500px" width="100%">
+</div>
 
 
 <router-outlet></router-outlet>

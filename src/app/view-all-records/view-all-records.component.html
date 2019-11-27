@@ -1,10 +1,11 @@
 <mat-card>
-<mat-list role="list">
+<mat-card-title class="title">Click on item to see full information:</mat-card-title>
+<mat-list class="matList" role="list">
     <mat-list-item role="listitem" *ngFor="let record of MyRecords">
-            <button mat-button [routerLink]="['/view-record', record._id]">
+            <button mat-button class="updateButton" [routerLink]="['/view-record', record._id]">
                 <mat-icon>art_track</mat-icon>
+                {{record.title}} - {{record.artist}}
             </button>
-            {{record.title}}
     </mat-list-item>
 </mat-list>
 </mat-card>

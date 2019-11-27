@@ -1,7 +1,26 @@
 .mat-button {
-    color : currentColor;
-  }
-  
-  .mat-button:not([disabled]):hover {
-    background-color: rgba(158, 158, 158, 0.75);
-  }
+  color: currentColor;
+  font-family: 'Bookman Old Style';
+  font-size: 20px;
+}
+
+.mat-button:not([disabled]):hover {
+  background-color: yellow;
+  color: black;
+}
+
+.mainToolbar {
+  background-image: linear-gradient(to right, #614385 0%, #516395 51%, #614385 100%)
+}
+
+.mainToolbar {
+  background-position: right center;
+}
+
+.title{
+  font-size: 45px;
+  color:  yellow;
+  font-family: 'Bookman Old Style';
+}
+
+

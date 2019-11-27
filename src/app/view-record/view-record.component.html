@@ -1,14 +1,13 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>
+        <mat-card-title class="title">
             {{myrecord.title}}
         </mat-card-title>
-        <mat-card-subtitle>
+        <mat-card-subtitle class="subtitle">
             {{myrecord.artist}}
         </mat-card-subtitle>
+        <img class="coverImage" mat-card-image src="assets\Images\blankrecord.jpg">
     </mat-card-header>
-
-    <img mat-card-image src="assets\Images\blankrecord.jpg" height="250px">
 
     <mat-card-content>
         <ul>
@@ -19,8 +18,8 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-raised-button [routerLink]="['/update-record', myrecord._id]" color="secondary">UPDATE</button>
-        <button mat-raised-button color="warn" (click)="onDeleteRecord(myrecord.id)">DELETE</button>
+        <button mat-raised-button class="updateButton" [routerLink]="['/update-record', myrecord._id]" color="secondary">UPDATE</button>
+        <button mat-raised-button class="deleteButton" (click)="onDeleteRecord(myrecord.id)">DELETE</button>
     </mat-card-actions>
 
 </mat-card>
