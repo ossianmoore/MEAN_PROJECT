@@ -4,6 +4,7 @@ import { RecordService } from '../Services/record.service';
 import { Location } from '@angular/common';
 //import ng form module to deal with angular html form
 //import and initiate service to make http requests
+//import location to navigate back, callback function in add function
 
 @Component({
   selector: 'app-add-record',
@@ -12,6 +13,7 @@ import { Location } from '@angular/common';
 })
 export class AddRecordComponent implements OnInit {
 
+  //initialise service and location
   constructor(private recordService: RecordService,
               private location: Location) { }
 
@@ -38,7 +40,7 @@ export class AddRecordComponent implements OnInit {
          this.location.back();
        });
     console.log(form.value);
-    //form.resetForm();
+    this.location.back();
   }
 
 }

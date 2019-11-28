@@ -1,4 +1,5 @@
 <mat-card>
+    <!--display items in card header. Details got from data binfing from ts file-->
     <mat-card-header>
         <mat-card-title class="title">
             {{myrecord.title}}
@@ -9,14 +10,18 @@
         <img class="coverImage" mat-card-image src="assets\Images\blankrecord.jpg">
     </mat-card-header>
 
+
+    <!--display items in list. bind data from myrecord object from ts file-->
     <mat-card-content>
         <ul>
             <li>Genre: {{myrecord.genre}}</li>
             <li>Year: {{myrecord.year}}</li>
-            <li>Price: {{myrecord.price}}</li>
+            <li>Price: €{{myrecord.price}}</li>
+            <li>Price after VAT: €{{priceAfterVat}}</li>
         </ul>
     </mat-card-content>
 
+    <!--button to go to update-record page. carries id from this page with it, to be used to identify the object you want to update-->
     <mat-card-actions>
         <button mat-raised-button class="updateButton" [routerLink]="['/update-record', myrecord._id]" color="secondary">UPDATE</button>
         <button mat-raised-button class="deleteButton" (click)="onDeleteRecord(myrecord.id)">DELETE</button>

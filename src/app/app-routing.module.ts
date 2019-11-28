@@ -4,6 +4,7 @@ import { AddRecordComponent } from './add-record/add-record.component';
 import { ViewAllRecordsComponent } from './view-all-records/view-all-records.component';
 import { ViewRecordComponent } from './view-record/view-record.component';
 import { UpdateRecordComponent } from './update-record/update-record.component';
+import { SearchRecordsComponent } from './search-records/search-records.component'
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'update-record/:id',
     component: UpdateRecordComponent
+  },
+  {
+    path: 'search-records',
+    component: SearchRecordsComponent
   }
 ];
 

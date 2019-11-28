@@ -11,11 +11,14 @@ import { Record } from '../record.model';
 })
 export class ViewAllRecordsComponent implements OnInit {
 
+  //var for storing array of objects in this component
   private MyRecords: any = [];
 
+  //initialise service to get functions 
   constructor( private recordService: RecordService,
                 public router: ActivatedRoute) { }
 
+  //on initialising, use the view all function from the service. set to local variable array.
   ngOnInit() {
     this.recordService.ViewAllRecords().subscribe((data) => {
       this.MyRecords = data.records;

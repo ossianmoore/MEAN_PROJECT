@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material';
 import { ViewRecordComponent } from './view-record/view-record.component';
 import { UpdateRecordComponent } from './update-record/update-record.component';
+import { SearchRecordsComponent } from './search-records/search-records.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UpdateRecordComponent } from './update-record/update-record.component';
     AddRecordComponent,
     ViewAllRecordsComponent,
     ViewRecordComponent,
-    UpdateRecordComponent
+    UpdateRecordComponent,
+    SearchRecordsComponent
   ],
   imports: [
     BrowserModule,
