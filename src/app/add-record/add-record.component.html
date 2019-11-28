@@ -26,7 +26,13 @@
         <br>
         <mat-form-field class="formField">
             <label class="label"> Cover: </label>
-            <input class="input" matInput type="text" name="cover" ngModel required #cover="ngModel">
+            <mat-select class="input" matInput type="text" name="cover" ngModel required #cover="ngModel">
+                <mat-option value="assets\Images\blankrecord.jpg">blank cover</mat-option>
+                <mat-option value="assets\Images\yellowRecord.jpg">yellow cover</mat-option>
+                <mat-option value="assets\Images\orangeRecord.jpg">orange cover</mat-option>
+                <mat-option value="assets\Images\greenRecord.jpg">green cover</mat-option>
+            </mat-select>
+            <!--<input class="input" matInput type="text" name="cover" ngModel required #cover="ngModel"> -->
         </mat-form-field>
         <br>
         <mat-form-field class="formField">

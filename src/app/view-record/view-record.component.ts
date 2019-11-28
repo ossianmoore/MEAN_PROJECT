@@ -4,6 +4,7 @@ import { RecordService } from '../Services/record.service';
 import { Record } from '../record.model';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-view-record',
@@ -18,7 +19,8 @@ export class ViewRecordComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
     private recordService: RecordService,
-    private location: Location
+    private location: Location,
+    private toast: ToastrService
   ) { }
 
 
@@ -30,8 +32,10 @@ export class ViewRecordComponent implements OnInit {
       console.log(this.myrecord);
 
       //calculation to get price of record plus VAT
+      //will not round number for some reason
       var vat = 23;
-      this.priceAfterVat = (this.myrecord.price / 100) * (vat + 100);
+      this.priceAfterVat =  Math.round(this.myrecord.price / 100) * (vat + 100);
+      Math.round(this.priceAfterVat).toFixed(2);
       console.log(this.priceAfterVat);
     });
 
@@ -43,6 +47,7 @@ export class ViewRecordComponent implements OnInit {
     console.log("Deleting this record = ", id);
     this.recordService.DeleteRecord(id).subscribe(
       () => {
+        this.toast.warning('', 'Your record has successfuly been deleted from the database');
         this.location.back();
       }
     );

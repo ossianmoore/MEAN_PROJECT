@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 
 //string from mongoDB with username and password to gain access
 const mongodb = 'mongodb+srv://admin:Admin123!@recordsdatabasecluster-1rdo8.mongodb.net/test?retryWrites=true&w=majority'
+
 mongoose.connect(mongodb, {useNewUrlParser:true});
 
 //structure for object to be stored and read
@@ -67,7 +68,7 @@ app.use(function(req, res, next) {
       artist: req.body.artist,
       year: req.body.year,
       genre: req.body.genre,
-      cover: req.body.genre,
+      cover: req.body.cover,
       price: req.body.price
     });
     res.json('data uploaded')

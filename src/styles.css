@@ -1,5 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/*import tost css file so that it is global*/
+@import '../node_modules/ngx-toastr/toastr.css';
 
+/*general padding for app. Set app font*/
 body, html {
     margin: 50px;
     margin-bottom: 50px;

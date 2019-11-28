@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { RecordService } from '../Services/record.service';
 import { Location } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 //import ng form module to deal with angular html form
 //import and initiate service to make http requests
 //import location to navigate back, callback function in add function
@@ -13,12 +14,14 @@ import { Location } from '@angular/common';
 })
 export class AddRecordComponent implements OnInit {
 
-  //initialise service and location
+  //initialise service, location, toast.
   constructor(private recordService: RecordService,
-              private location: Location) { }
+              private location: Location,
+              private toast: ToastrService) { }
 
   ngOnInit() {
-  }
+     
+  }//end oninit
 
 
   //function to add record to database using service. Takes values from form and uses them as paramterers for the servcie function
@@ -37,10 +40,12 @@ export class AddRecordComponent implements OnInit {
        form.value.genre,
        form.value.cover,
        form.value.price).subscribe(()=> {
-         this.location.back();
        });
     console.log(form.value);
+    this.toast.success('', 'Your record has successfuly been added to the database');
     this.location.back();
+
+
   }
 
 }

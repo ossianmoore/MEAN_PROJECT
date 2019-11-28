@@ -18,9 +18,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material';
+
 import { ViewRecordComponent } from './view-record/view-record.component';
 import { UpdateRecordComponent } from './update-record/update-record.component';
 import { SearchRecordsComponent } from './search-records/search-records.component';
+
+import { ToastrModule} from 'ngx-toastr';
+import { MatSelectModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ import { SearchRecordsComponent } from './search-records/search-records.componen
     FormsModule,
     HttpClientModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    ToastrModule.forRoot(),
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
