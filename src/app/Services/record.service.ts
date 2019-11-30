@@ -74,6 +74,10 @@ export class RecordService {
     return this.httpClient.put('http://localhost:3000/api/records/records/'+id,record);
   }
 
+  GetRecordByGenre(genre: string):Observable<any>{
+    return this.httpClient.get('http://localhost:3000/api/records/records/search'+genre);
+  }
+
 
 
 

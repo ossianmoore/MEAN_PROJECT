@@ -16,36 +16,32 @@ export class AddRecordComponent implements OnInit {
 
   //initialise service, location, toast.
   constructor(private recordService: RecordService,
-              private location: Location,
-              private toast: ToastrService) { }
+    private location: Location,
+    private toast: ToastrService) { }
 
   ngOnInit() {
-     
+
   }//end oninit
 
 
   //function to add record to database using service. Takes values from form and uses them as paramterers for the servcie function
-  //logs values and resets form
   //if statement to check if from is valid. if not it returns.
-  //goes to previous page once add is complete
-  onAddRecord(form: NgForm){
-    if (!form.valid){
+  //goes to previous page once add is complete and shows toast
+  onAddRecord(form: NgForm) {
+    if (!form.valid) {
       return;
     }
     console.log(form.value);
-     this.recordService.AddRecord(
-       form.value.title,
-       form.value.artist,
-       form.value.year,
-       form.value.genre,
-       form.value.cover,
-       form.value.price).subscribe(()=> {
-       });
-    console.log(form.value);
+    this.recordService.AddRecord(
+      form.value.title,
+      form.value.artist,
+      form.value.year,
+      form.value.genre,
+      form.value.cover,
+      form.value.price).subscribe(() => {
+      });
     this.toast.success('', 'Your record has successfuly been added to the database');
     this.location.back();
+  }//end onAddRecord
 
-
-  }
-
-}
+}//end clas

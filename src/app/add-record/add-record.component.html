@@ -1,7 +1,7 @@
 <mat-card>
     <!--NGform to add record object to DB. All fields must be filled. Fields are then binded to ts variables to be used in an Add function-->
     <form (submit)="onAddRecord(recordForm)" #recordForm="ngForm">
-<mat-card-header>
+        <mat-card-header>
             <img class="coverImage" mat-card-image src="/assets/Images/file-arrangement-1181769.jpg">
         </mat-card-header>
         <mat-form-field class="formField">
@@ -32,7 +32,6 @@
                 <mat-option value="assets\Images\orangeRecord.jpg">orange cover</mat-option>
                 <mat-option value="assets\Images\greenRecord.jpg">green cover</mat-option>
             </mat-select>
-            <!--<input class="input" matInput type="text" name="cover" ngModel required #cover="ngModel"> -->
         </mat-form-field>
         <br>
         <mat-form-field class="formField">

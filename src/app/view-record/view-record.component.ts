@@ -13,6 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ViewRecordComponent implements OnInit {
 
+  //initialise necessary variables
   myrecord: any;
   id: string;
   priceAfterVat: number;
@@ -32,16 +33,14 @@ export class ViewRecordComponent implements OnInit {
       console.log(this.myrecord);
 
       //calculation to get price of record plus VAT
-      //will not round number for some reason
       var vat = 23;
-      this.priceAfterVat =  Math.round(this.myrecord.price / 100) * (vat + 100);
-      Math.round(this.priceAfterVat).toFixed(2);
-      console.log(this.priceAfterVat);
+      this.priceAfterVat = (this.myrecord.price / 100) * (vat + 100);
     });
 
   }
 
-  //delete function. object id is used as paramater to identify unique object. calls service delete function. callback function returns to previous page
+  //delete function. object id is used as paramater to identify unique object. calls service delete function.
+  // callback function returns to previous page and shows toast message
   onDeleteRecord(id: string) {
     id = this.id;
     console.log("Deleting this record = ", id);

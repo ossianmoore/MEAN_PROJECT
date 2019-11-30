@@ -7,6 +7,8 @@ import { UpdateRecordComponent } from './update-record/update-record.component';
 import { SearchRecordsComponent } from './search-records/search-records.component'
 
 
+//list of router for angular routing to use.
+//:id specifies that it carries a parameter to the next page. in this case, it's id
 const routes: Routes = [
   {
     path: 'addRecord',

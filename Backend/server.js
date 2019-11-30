@@ -90,11 +90,22 @@ app.use(function(req, res, next) {
     })
   });
 
+  //this was my original idea for a search function. Ended up using the get function on init of search page
+  // to get all objects and then search them, locally rather than on the DB.
+  app.get('/api/records/records/search/:genre', (req, res)=>{
+    RecordModel.find({'genre' : req.params.genre},
+    (error,data) =>{
+      res.json(data);
+    });
+  })
+
 
   //function to begin server on port that was initialised at top of page
   app.listen(PORT, function () {
     console.log('Server is running on Port: ', PORT);
   });
+
+
 
 
 

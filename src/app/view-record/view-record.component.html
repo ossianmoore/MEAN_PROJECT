@@ -12,12 +12,13 @@
 
 
     <!--display items in list. bind data from myrecord object from ts file-->
+    <!--set the prices to 2 decimal places-->
     <mat-card-content>
         <ul>
             <li>Genre: {{myrecord.genre}}</li>
             <li>Year: {{myrecord.year}}</li>
-            <li>Price: €{{myrecord.price}}</li>
-            <li>Price after VAT: €{{priceAfterVat}}</li>
+            <li>Price: €{{myrecord.price | number : '1.2-2'}}</li>
+            <li>Price after VAT: €{{priceAfterVat | number : '1.2-2'}}</li>
         </ul>
     </mat-card-content>
 

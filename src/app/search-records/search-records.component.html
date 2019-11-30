@@ -1,1 +1,80 @@
-<p>search-records works!</p>
+<mat-card>
+    <mat-form-field>
+        <mat-select [(ngModel)]="searchOption" name="genre" required>
+            <mat-option value="Rock" name="rock">Rock</mat-option>
+            <mat-option value="Pop" name="pop">Pop</mat-option>
+            <mat-option value="HipHop" name="hiphop">Hip-Hop</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="searchByGenre(searchOption)">Search Records</button>
+</mat-card>
+
+<br>
+<br>
+<br>
+
+<mat-card>
+    <mat-card-title class="title">Search results:</mat-card-title>
+    <mat-list-item role="listitem" *ngFor="let results of recordsEqualTo">
+        <button mat-button class="viewButton" [routerLink]="['/view-record', results._id]">
+            {{results.title}}
+            {{results.artist}}
+        </button>
+    </mat-list-item>
+</mat-card>
+
+
+
+
+
+
+
+
+
+
+<!-- <mat-card>
+    <mat-form-field>
+        <mat-select [(ngModel)] = "selectedGenre" name = "Genre" required>
+            <mat-option *ngFor = "let G of Genre" [value] = "Genre">
+            {{G}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-button (click)="SearchByGenre(selectedGenre)" >Search by Genre</button>
+    <h1>{{records.length}} Record(s) found!</h1>
+</mat-card>
+
+<mat-accordion *ngFor="let r of MyRecords">
+    <mat-expansion-panel [expanded]="false" >
+        
+        <mat-expansion-panel-header>
+   
+            <mat-panel-title>
+                <h3> {{ r.title }} </h3>
+            </mat-panel-title>
+
+            <mat-panel-description>
+                <h3>{{ r.artist }}</h3>
+            </mat-panel-description>
+        
+            <mat-panel-description>
+                <h3>{{ r.genre }}</h3>
+            </mat-panel-description>
+
+            <mat-panel-description>
+                <h3>{{ r.year }}</h3>
+            </mat-panel-description>
+
+            <mat-panel-description>
+                <h3>{{ r.pri }}</h3>
+            </mat-panel-description>
+    
+        </mat-expansion-panel-header>
+
+        <mat-action-row>
+           	<button mat-button [routerLink]="['/update-record/', record._id]" color="primary">UPDATE</button>
+            <button mat-button (click)="DeleteRecord(record.genre)" color="warn">DELETE</button>
+        </mat-action-row>
+
+    </mat-expansion-panel>
+</mat-accordion> -->
