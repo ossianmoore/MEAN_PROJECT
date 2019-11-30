@@ -42,7 +42,12 @@
     height: 60%;
     position: absolute;
 	border-top-right-radius: 60px;
-	border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    opacity: 80%;
+}
+
+.mat-slider{
+    width: 400px;
 }
 
 

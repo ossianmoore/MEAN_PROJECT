@@ -25,6 +25,8 @@ import { SearchRecordsComponent } from './search-records/search-records.componen
 
 import { ToastrModule} from 'ngx-toastr';
 import { MatSelectModule } from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { MatSelectModule } from '@angular/material';
     MatListModule,
     MatIconModule,
     ToastrModule.forRoot(),
-    MatSelectModule
+    MatSelectModule,
+    MatSliderModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

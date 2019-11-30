@@ -6,7 +6,7 @@
 <mat-list class="matList" role="list">
     <mat-list-item role="listitem" *ngFor="let record of MyRecords">
             <button mat-button class="viewButton" [routerLink]="['/view-record', record._id]">
-                <mat-icon>art_track</mat-icon>
+                <img class="searchItemImage" src="{{record.cover}}" width="60px" height="40px">
                 {{record.title}} - {{record.artist}}
             </button>
     </mat-list-item>

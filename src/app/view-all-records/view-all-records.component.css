@@ -6,6 +6,7 @@
 }
 .mat-button:hover{
     color: chartreuse;
+    opacity: 70%;
 }
 .mat-icon{
     padding-right: 30px;
@@ -23,3 +24,8 @@
     color: wheat;
     text-decoration: underline;
 }
+
+.searchItemImage{
+    padding-top: 10px;
+}
+

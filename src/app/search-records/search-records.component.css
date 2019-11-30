@@ -1,0 +1,51 @@
+.searchButton {
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    width: 400px;
+    padding-left: 20px;
+    border-radius: 50px;
+}
+
+.searchButton:hover {
+    background-position: right center;
+    color: black;
+    opacity: 60%;
+}
+
+.searchInput{
+    width: 400px;
+    padding-right: 30%;
+    font-family: 'Bookman Old Style';
+    font-size: 30px;
+    color: chartreuse;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.mat-card{
+    background-color: lightslategray;
+    border-radius: 25px;
+}
+
+.title{
+    font-family: 'Bookman Old Style';
+    font-size: 25px;
+    padding-left: 30px;
+    color: wheat;
+    text-decoration: underline;
+}
+
+.mat-button{
+    font-family: 'Bookman Old Style';
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+.mat-button:hover{
+    color: chartreuse;
+}
+
+.searchItemImage{
+padding-top: 10px;
+}

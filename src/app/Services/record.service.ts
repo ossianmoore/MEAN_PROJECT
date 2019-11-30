@@ -34,7 +34,7 @@ export class RecordService {
             year: string,
             genre: string,
             cover: string,
-            price: number
+            price: number,
             ):Observable<any>{
     const record:Record = { title : title,
                             artist : artist,
@@ -55,14 +55,14 @@ export class RecordService {
   }
 
   //function to update existing record via inputs on update component
-  //updates correct record through unique id. vat is calculated in function
+  //updates correct record through unique id. vat is calculated in update class function
   UpdateRecord(id: string,
                title: string,
                artist: string,
                year: string,
                genre: string,
                cover: string,
-               price: number
+               price: number,
                ):Observable<any>{
     const record:Record = {title : title,
                            artist : artist,
@@ -74,6 +74,8 @@ export class RecordService {
     return this.httpClient.put('http://localhost:3000/api/records/records/'+id,record);
   }
 
+
+  //part of original plan to query db for search. decided to do it locally in search component.
   GetRecordByGenre(genre: string):Observable<any>{
     return this.httpClient.get('http://localhost:3000/api/records/records/search'+genre);
   }

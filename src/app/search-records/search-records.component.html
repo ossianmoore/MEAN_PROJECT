@@ -1,27 +1,35 @@
 <mat-card>
-    <mat-form-field>
+    <mat-form-field class="searchInput">
+            <mat-label>Please pick a genre...</mat-label>
         <mat-select [(ngModel)]="searchOption" name="genre" required>
+            <mat-option value="" selected data-default>Please pick a genre...</mat-option>
             <mat-option value="Rock" name="rock">Rock</mat-option>
             <mat-option value="Pop" name="pop">Pop</mat-option>
+            <mat-option value="Reggae" name="reggae">Reggae</mat-option>
+            <mat-option value="Jazz" name="jazz">Jazz</mat-option>
+            <mat-option value="Electronic" name="electronic">Electronic</mat-option>
             <mat-option value="HipHop" name="hiphop">Hip-Hop</mat-option>
         </mat-select>
     </mat-form-field>
-    <button mat-raised-button color="accent" (click)="searchByGenre(searchOption)">Search Records</button>
+    <button mat-raised-button color="accent" class="searchButton" (click)="searchByGenre(searchOption)">Search
+        Records</button>
 </mat-card>
 
 <br>
 <br>
 <br>
 
-<mat-card>
+
+<mat-card *ngIf="recordsEqualTo != 0">
     <mat-card-title class="title">Search results:</mat-card-title>
-    <mat-list-item role="listitem" *ngFor="let results of recordsEqualTo">
+    <mat-list-item class="searchItems" role="listitem" *ngFor="let results of recordsEqualTo">
         <button mat-button class="viewButton" [routerLink]="['/view-record', results._id]">
-            {{results.title}}
-            {{results.artist}}
+            <img class="searchItemImage" src="{{results.cover}}" width="50px" padding="10px">
+            {{results.title}} - {{results.artist}}: €{{results.price | number : '1.2-2'}}
         </button>
     </mat-list-item>
 </mat-card>
+
 
 
 

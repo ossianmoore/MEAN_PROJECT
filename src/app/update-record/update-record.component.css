@@ -1,2 +1,50 @@
-.updateButton {background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%)}
-.updateButton:hover { background-position: right center; }
+.updateButton {
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    width: 400px;
+    padding-left: 20px;
+    border-radius: 50px;
+}
+
+.updateButton:hover {
+    background-position: right center;
+    color: black;
+    opacity: 60%;
+}
+
+.mat-card-content{
+    font-size: 30px;
+    font-family: 'Bookman Old Style';
+}
+
+.mat-card{
+    background-color: lightslategray;
+    border-radius: 25px;
+}
+
+.label{
+    font-family: 'Bookman Old Style';
+    font-size: 20px;
+    color: yellow;
+}
+
+.mat-form-field{
+    width: 400px;
+}
+
+.input{
+    font-family: 'Bookman Old Style';
+    font-size: 30px;
+    color: chartreuse;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.mat-option{
+    font-family: 'Bookman Old Style';
+    color: chartreuse;
+    background-color: rgb(71, 56, 168);
+}
+
+  

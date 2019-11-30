@@ -3,28 +3,46 @@
 <mat-card>
     <form (submit)="onUpdateRecord(recordForm)" #recordForm="ngForm">
         <mat-form-field>
-            <label>Title</label>
-            <input matInput type="text" name="title" ngModel={{record.title}} required #title="ngModel">
+            <label class="label">Title</label>
+            <input matInput class="input" type="text" name="title" ngModel={{record.title}} required #title="ngModel">
         </mat-form-field>
         <br>
         <mat-form-field>
-            <label>Artist</label>
-            <input matInput type="text" name="artist" ngModel={{record.artist}} required #artist="ngModel">
+            <label class="label">Artist</label>
+            <input matInput class="input" type="text" name="artist" ngModel={{record.artist}} required #artist="ngModel">
         </mat-form-field>
         <br>
         <mat-form-field>
-            <label>Year</label>
-            <input matInput type="text" name="year" ngModel={{record.year}} required #year="ngModel">
+            <label class="label">Year</label>
+            <input matInput class="input" type="text" name="year" ngModel={{record.year}} required #year="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field>
+
+
+        <mat-form-field class="formField">
+                <label class="label"> Genre: </label>
+                <mat-select class="input" matInput type="text" name="genre" ngModel="{{record.genre}}" required #genre="ngModel">
+                        <mat-option value="Rock">Rock</mat-option>
+                        <mat-option value="Pop">Pop</mat-option>
+                        <mat-option value="Reggae">Reggae</mat-option>
+                        <mat-option value="Jazz">Jazz</mat-option>
+                        <mat-option value="Electronic">Electronic</mat-option>
+                        <mat-option value="HipHop">Hip-Hop</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+
+
+        <!-- <mat-form-field>
             <label>Genre</label>
             <input matInput type="text" name="genre" ngModel={{record.genre}} required #genre="ngModel">
-        </mat-form-field>
+        </mat-form-field> -->
         <br>
         <mat-form-field class="formField">
-            <label class="label"> Cover: </label>
-            <mat-select class="input" matInput type="text" name="cover" ngModel required #cover="ngModel">
+            <label class="label"> Cover </label>
+            <mat-select class="input" matInput type="text" name="cover" ngModel="{{record.cover}}" required #cover="ngModel">
                 <mat-option value="assets\Images\blankrecord.jpg">blank cover</mat-option>
                 <mat-option value="assets\Images\yellowRecord.jpg">yellow cover</mat-option>
                 <mat-option value="assets\Images\orangeRecord.jpg">orange cover</mat-option>
@@ -33,8 +51,8 @@
         </mat-form-field>
         <br>
         <mat-form-field>
-            <label>Price</label>
-            <input matInput type="number" name="price" ngModel={{record.price}} required #price="ngModel">
+            <label class="label">Price</label>
+            <input matInput class="input" type="number" name="price" ngModel={{record.price}} required #price="ngModel">
         </mat-form-field>
         <br>
         <button mat-raised-button class="updateButton" type="submit">

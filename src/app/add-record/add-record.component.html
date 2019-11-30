@@ -19,11 +19,25 @@
             <input class="input" matInput type="text" name="year" ngModel required #year="ngModel">
         </mat-form-field>
         <br>
-        <mat-form-field class="formField">
+        <!-- <mat-form-field class="formField">
             <label class="label"> Genre: </label>
             <input class="input" matInput type="text" name="genre" ngModel required #genre="ngModel">
         </mat-form-field>
-        <br>
+        <br> -->
+        <mat-form-field class="formField">
+                <label class="label"> Genre: </label>
+                <mat-select class="input" matInput type="text" name="genre" ngModel required #genre="ngModel">
+                    <mat-option value="Rock">Rock</mat-option>
+                    <mat-option value="Pop">Pop</mat-option>
+                    <mat-option value="Reggae">Reggae</mat-option>
+                    <mat-option value="Jazz">Jazz</mat-option>
+                    <mat-option value="Electronic">Electronic</mat-option>
+                    <mat-option value="HipHop">HipHop</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+
+            <!--****************************-->
         <mat-form-field class="formField">
             <label class="label"> Cover: </label>
             <mat-select class="input" matInput type="text" name="cover" ngModel required #cover="ngModel">
