@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ViewAllRecordsComponent implements OnInit {
 
   //var for storing array of objects in this component
-  private MyRecords: any = [];
+  public MyRecords: any = [];
 
   //initialise service to get functions 
   constructor( private recordService: RecordService,

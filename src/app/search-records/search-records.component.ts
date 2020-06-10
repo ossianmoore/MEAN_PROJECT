@@ -11,8 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 export class SearchRecordsComponent implements OnInit {
 
   public MyRecords: any = [];
-  private recordsEqualTo: any = [];
-  private searchOption: string;
+  public recordsEqualTo: any = [];
+  public searchOption: string;
 
   constructor(private recordService: RecordService,
     private activatedRoute: ActivatedRoute,
